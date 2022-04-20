@@ -1,2 +1,2 @@
 # schoell
-schoeell
+schoell
