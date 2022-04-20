@@ -6,6 +6,4 @@ services:
       dockerfile: Dockerfile
     ports:
       - '80:80'
-    volumes:
-      - './assets:/assets'
     container_name: 'web'
