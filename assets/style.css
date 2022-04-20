@@ -1,0 +1,88 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,800);
+
+body {
+  background: white;
+  font-family: 'Open Sans';
+  font-size: 1.3em;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+#nav {
+  background: white; /*url("http://thumb1.shutterstock.com/display_pic_with_logo/1487123/134611310/stock-vector-colorful-geometric-background-with-triangles-vector-eps-134611310.jpg");*/
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+#nav ul{
+  list-style: none;
+}
+#nav li {
+  display: inline-block;
+  padding: 10px;
+}
+#nav li:hover {
+  background: coral;
+}
+#nav li:hover a{
+  color: black;
+}
+.content {
+  padding-top: 90px;
+}
+.anchor {
+  display: block; /*this is important!*/
+}
+.title {
+  position: relative;
+  display: block;
+  top: 10px;
+  padding: 20px 0;
+  font-size: 1.9em;
+}
+.title:before{
+  font-size: 1.5em;
+  content: "\005B";
+}
+.title:after{
+  font-size: 1.5em;
+  content: "\005D";
+}
+.page-divider {
+  margin: 0 auto;
+  width: 100%;
+  min-height: 500px;
+  height: 100%; 
+  overflow: hidden;
+  background-size: cover;
+}
+.pgd1{background-image: url("bilder/verteiler.jpg");}
+.pgd2{background-image: url("bilder/wallbox.jpg");}
+
+.page {
+  min-width: 200px;
+  padding: 50px 100px;
+}
+#page1 {background: lightsteelblue;}
+#page2 {background: lightsalmon;}
+#page3 {background: lightgrey;}
+
+footer {
+  min-height: 200px;
+  padding: 100px;
+}
+footer p {
+  -webkit-column-count: 2;
+  -webkit-column-gap: 40px;
+  -moz-column-count: 2;
+  -moz-column-gap: 40px;
+  -o-column-count: 2;
+  -o-column-gap: 40px;
+  column-count: 2;
+  column-gap: 40px;
+}

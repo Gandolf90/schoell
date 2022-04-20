@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  run:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '80:80'
+    volumes:
+      - './assets:/assets'
+    container_name: 'web'
