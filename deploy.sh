@@ -37,7 +37,11 @@ DeployLive () {
 	echo ""
 	echoCountdown 5
 
-    docker buildx build --platform linux/amd64,linux/arm64 --push -t gandolf90/schoell:$UserChoice .
+	docker login
+
+	echo "docker buildx build --platform linux/amd64,linux/arm64 --push -t gandolf90/schoell:$Version ."
+
+    docker buildx build --platform linux/amd64,linux/arm64 --push -t gandolf90/schoell:$Version .
 }
 
 printHeader () {
