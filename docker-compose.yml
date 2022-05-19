@@ -1,9 +1,7 @@
 version: '3.3'
 services:
   run:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: gandolf90/schoell:latest
     ports:
       - '80:80'
     container_name: 'web'
