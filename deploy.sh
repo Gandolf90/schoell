@@ -40,8 +40,12 @@ DeployLive () {
 	docker login
 
 	echo "docker buildx build --platform linux/amd64,linux/arm64 --push -t gandolf90/schoell:$Version ."
+  docker buildx build --platform linux/amd64,linux/arm64 --push -t gandolf90/schoell:$Version .
 
-    docker buildx build --platform linux/amd64,linux/arm64 --push -t gandolf90/schoell:$Version .
+  echo ""
+  echo "docker buildx build --platform linux/amd64,linux/arm64 --push -t gandolf90/schoell:latest ."
+  docker buildx build --platform linux/amd64,linux/arm64 --push -t gandolf90/schoell:latest .
+
 }
 
 printHeader () {
