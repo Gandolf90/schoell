@@ -31,6 +31,9 @@ DeployChoice () {
 
 DeployLive () {
 	echo "Version?"
+	echo ""
+	echo "current Versions-Number"
+	cat version
 	echo -n "  "
 	read Version
 
@@ -46,6 +49,19 @@ DeployLive () {
   echo "docker buildx build --platform linux/amd64,linux/arm64 --push -t gandolf90/schoell:latest ."
   docker buildx build --platform linux/amd64,linux/arm64 --push -t gandolf90/schoell:latest .
 
+  printDeployHeader psweb1
+  cat commands-to-execute-remotely.sh | ssh psweb1
+  printDeployHeader psweb2
+  cat commands-to-execute-remotely.sh | ssh psweb2
+}
+
+printDeployHeader () {
+	clear
+	echo ""
+	echoWarning "----------------------------------------------------------------"
+	echoSuccess "---                    Deploy on $1                 ---"
+	echoWarning "----------------------------------------------------------------"
+	echo ""
 }
 
 printHeader () {
